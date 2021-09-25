@@ -1,0 +1,5 @@
+#!/bin/bash
+
+var=$(cat /etc/passwd | grep "bash" | awk -F':' '$3 > 999 {print $1}')
+
+echo "$var"
