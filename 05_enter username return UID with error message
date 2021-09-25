@@ -1,0 +1,13 @@
+#!/bin/bash
+
+read -p "Enter user name:" username
+uid=$(cat /etc/passwd | grep "bash" | grep "$username" | awk -F':' '{print $3}')
+echo $uid
+if [[ -n $uid ]]
+        then
+                echo "$username has UID $uid"  
+        else
+                echo " user is Not present on system"
+fi
+~                                           
+~       
